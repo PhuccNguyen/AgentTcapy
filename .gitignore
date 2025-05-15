@@ -1,6 +1,10 @@
+# .gitignore
+node_modules/
+.env
+.env.local
+dist/
+build/
+logs/
+.vscode/
 .DS_Store
-/node_modules/
-
-# React Router
-/.react-router/
-/build/
+*.log
