@@ -1,0 +1,133 @@
+/* src/components/common/Button.css */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-speed-fast) ease-in-out;
+  border: none;
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Button Sizes */
+.button-small {
+  padding: 0.25rem 0.75rem;
+  font-size: var(--font-size-sm);
+  border-radius: var(--border-radius-sm);
+}
+
+.button-medium {
+  padding: 0.5rem 1rem;
+}
+
+.button-large {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--font-size-lg);
+}
+
+/* Button Variants */
+.button-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.button-primary:hover, .button-primary:focus {
+  background-color: var(--color-primary-dark);
+}
+
+.button-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-gray-900);
+}
+
+.button-secondary:hover, .button-secondary:focus {
+  background-color: var(--color-secondary-dark);
+  color: var(--color-white);
+}
+
+.button-outlined {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.button-outlined:hover, .button-outlined:focus {
+  background-color: var(--color-primary-light);
+  color: var(--color-white);
+}
+
+.button-text {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.button-text:hover, .button-text:focus {
+  background-color: rgba(79, 70, 229, 0.1);
+}
+
+.button-danger {
+  background-color: var(--color-danger);
+  color: var(--color-white);
+}
+
+.button-danger:hover, .button-danger:focus {
+  background-color: #dc2626; /* darker red */
+}
+
+/* Button States */
+.button-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.button-full-width {
+  width: 100%;
+}
+
+/* Button with Icons */
+.button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.button-small svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.button-large svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Button Loading State */
+.button-loading {
+  position: relative;
+  color: transparent;
+}
+
+.button-loading::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--color-white);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

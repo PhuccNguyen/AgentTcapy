@@ -1,0 +1,116 @@
+/* src/components/common/Input.css */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+}
+
+.required-mark {
+  color: var(--color-danger);
+  margin-left: 0.25rem;
+}
+
+.input-field-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: var(--font-size-md);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--border-radius-md);
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
+  transition: all var(--transition-speed-fast) ease-in-out;
+}
+
+.input-field.with-icon {
+  padding-left: 2.5rem;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.input-field::placeholder {
+  color: var(--color-gray-400);
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gray-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+/* src/components/common/Input.css (tiếp tục) */
+.password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-gray-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.password-toggle:hover, .password-toggle:focus {
+  color: var(--color-gray-700);
+}
+
+.input-error {
+  font-size: var(--font-size-sm);
+  color: var(--color-danger);
+  margin-top: 0.5rem;
+}
+
+/* Input Container States */
+.input-container.has-error .input-field {
+  border-color: var(--color-danger);
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+.input-container.has-error .input-field:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.input-container.focused .input-label {
+  color: var(--color-primary);
+}
+
+.input-container.disabled .input-field {
+  background-color: var(--color-gray-100);
+  border-color: var(--color-gray-200);
+  cursor: not-allowed;
+}
+
+.input-container.disabled .input-label {
+  color: var(--color-gray-500);
+}

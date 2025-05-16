@@ -1,0 +1,90 @@
+/* src/components/common/Card.css */
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition-speed-fast), box-shadow var(--transition-speed-fast);
+}
+
+/* Card Elevations */
+.card-elevation-low {
+  box-shadow: var(--shadow-sm);
+}
+
+.card-elevation-medium {
+  box-shadow: var(--shadow-md);
+}
+
+.card-elevation-high {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Card Padding */
+.card-padding-none {
+  padding: 0;
+}
+
+.card-padding-small {
+  padding: var(--spacing-3);
+}
+
+.card-padding-medium {
+  padding: var(--spacing-5);
+}
+
+.card-padding-large {
+  padding: var(--spacing-8);
+}
+
+/* Card Header */
+.card-header {
+  margin-bottom: var(--spacing-4);
+}
+
+.card-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin: 0 0 var(--spacing-1);
+}
+
+.card-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  margin: 0;
+}
+
+/* Card Content */
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Clickable Card */
+.card-clickable {
+  cursor: pointer;
+}
+
+.card-clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Card with image */
+.card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-image-container {
+  margin: calc(-1 * var(--spacing-5)) calc(-1 * var(--spacing-5)) var(--spacing-5);
+}
+
+/* Card Media Top */
+.card-media-top img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-top-left-radius: var(--border-radius-lg);
+  border-top-right-radius: var(--border-radius-lg);
+}
